@@ -1,11 +1,10 @@
 document.getElementById("gradeForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
     const marks = parseInt(document.getElementById("marks").value);
     let grade = "";
     let passStatus = "";
 
-    // Determine the grade based on the input marks
     if (marks >= 90 && marks <= 100) {
         grade = "A+";
         passStatus = "Passed";
@@ -38,7 +37,7 @@ document.getElementById("gradeForm").addEventListener("submit", function(event) 
         passStatus = "Invalid marks";
     }
 
-    // Display the result
+   
     document.getElementById("result").innerHTML = 
         `Grade: ${grade}<br>${passStatus}`;
 });
